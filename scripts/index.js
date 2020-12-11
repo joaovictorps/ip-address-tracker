@@ -7,7 +7,7 @@ function search() {
 
         replace(city, region, postalCode, ip, isp, timezone, lat, lng);
     }).catch(err => {
-        alert('IP address or domain invalid');
+        alert("Invalid ip address or domain. Make sure you don't have any AD blockers enabled.");
     });
 }
 
@@ -17,7 +17,9 @@ function getAddress() {
         const { city, region, timezone, postalCode, lat, lng } = res.data.location;
 
         replace(city, region, postalCode, ip, isp, timezone, lat, lng);
-    }).catch(err => console.log(err));
+    }).catch(err => {
+        alert("Invalid ip address or domain. Make sure you don't have any AD blockers enabled.");
+    });
 
 }
 
