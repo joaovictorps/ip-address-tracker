@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>IP Address Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  crossorigin=""/>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <div id='bg-image'></div>
+  <div id='mapDIV'></div>
+
+  <main>
+    <h1>IP Address Tracker</h1>
+    <div class='container-search'>
+      <input type='text' id='search' placeholder="Search for any IP address or domain"/>
+      <input type='button' onClick='search()' />
+    </div>
+
+    <div class='descriptions'>
+      <div class='description'>
+        <label>IP Address</label>
+        <h2 id='ip'>---.---.---.---</h2>    
+      </div>
+
+      <div class='description'>
+        <label>Location</label>  
+        <h2 id='location'>----, -- -----</h2>  
+      </div>
+
+      <div class='description'>
+        <label>Timezone</label>
+        <h2 id='timezone'>-- --:--</h2>  
+      </div>
+
+      <div class='description'>
+        <label>ISP</label>    
+        <h2 id='isp'>-----</h2>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  crossorigin=""></script>
+</body>
+
+</html>
