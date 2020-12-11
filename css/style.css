@@ -19,32 +19,35 @@ textarea:focus, input:focus, select:focus {
     --dark-gray: hsl(0, 0%, 59%);
 }
 
-#bg-image {
+#bg {
     position: absolute;
-    top: 0;
     z-index: 0;
     width: 100vw;
-    height: 40vh;
+    height: auto;
+}
+
+#bg-image {
+    width: 100vw;
+    height: 200px;
     background: url('../images/pattern-bg.png') top no-repeat;
     background-size: 100vw 100%;
 }
 
 #mapDIV {
-    position: absolute;
-    z-index: 0;
     width: 100vw;
-    height: 60vh;
+    height: 600px;
     bottom: 0;
-    background-color: black;
 }
 
 main {
     position: relative;
+    z-index: 1;
 }
 
 main > h1 {
+    font-size: 22px;
     text-align: center;
-    margin: 30px;
+    padding-top: 30px;
     color: white;
 }
 
@@ -124,6 +127,11 @@ main > h1 {
     
     #mapDIV {
         height: 65vh;
+    }
+
+    main > h1 {
+        font-size: 28px;
+        
     }
 
     .container-search {
